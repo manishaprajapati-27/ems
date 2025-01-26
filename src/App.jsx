@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import Login from "./components/Auth/Login";
 import EmployeeDashboard from "./components/Dashbaord/EmployeeDashboard";
 import AdminDashborad from "./components/Dashbaord/AdminDashborad";
-import { getLocalStorage, setLocalStorage } from "./utils/LocalStorage";
 
 function App() {
-  useEffect(() => {
-    // setLocalStorage();
-    getLocalStorage();
-  });
+  const [user, setUser] = useState(null);
+
+  const handleLogin = (email, password) => {
+    console.log(email, password);
+  };
+  handleLogin();
 
   return (
     <>
-      <Login />
+      {!user ? <Login /> : ""}
       {/* <EmployeeDashboard /> */}
       {/* <AdminDashborad /> */}
     </>
