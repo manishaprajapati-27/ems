@@ -3,10 +3,10 @@ import Header from "../Structure/Header";
 import TaskListNumber from "../Structure/TaskListNumber";
 import TaskList from "../TaskList/TaskList";
 
-const EmployeeDashboard = ({ data }) => {
+const EmployeeDashboard = ({ data, changeUser }) => {
   return (
     <>
-      <Header data={data} />
+      <Header data={data} changeUser={changeUser} />
       <TaskListNumber data={data} />
       <TaskList data={data} />
     </>
